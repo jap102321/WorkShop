@@ -40,4 +40,12 @@ public class Capitan {
         this.matricula_navegacion = matricula_navegacion;
     }
 
+    @Override
+    public String toString() {
+        return "Capitan{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", matricula_navegacion=" + matricula_navegacion +
+                '}';
+    }
 }

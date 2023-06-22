@@ -16,9 +16,8 @@ public abstract class Embarcacion{
 
     }
 
-    public Embarcacion(int precio_base, int valor_adicional, Capitan capitan, int longitud) {
+    public Embarcacion(int precio_base, Capitan capitan, int longitud) {
         this.precio_base = precio_base;
-        this.valor_adicional = valor_adicional;
         this.capitan = capitan;
         this.longitud = longitud;
 
@@ -27,5 +26,6 @@ public abstract class Embarcacion{
     public abstract int getValor_adicional();
     public abstract void setValor_adicional(int valor_adicional);
     public abstract int alquilarEmbarcacion();
+
 
 }

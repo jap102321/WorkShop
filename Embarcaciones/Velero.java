@@ -13,12 +13,12 @@ public class Velero extends Embarcacion{
     private int n_mastiles;
     private int precio_total;
 
-    public Velero(){
 
-    }
-
-    public Velero(int precio_base, int valor_adicional, Capitan capitan, int longitud, LocalDate fecha_fabric, int n_mastiles){
-        super(precio_base, valor_adicional, capitan, longitud);
+    public Velero(int precio_base, Capitan capitan, int longitud, LocalDate fecha_fabric, int n_mastiles){
+        super(precio_base, capitan, longitud);
+        this.precio_base = precio_base;
+        this.capitan = capitan;
+        this.longitud = longitud;
         this.fecha_fabric = fecha_fabric;
         this.n_mastiles = n_mastiles;
     }
@@ -41,11 +41,24 @@ public class Velero extends Embarcacion{
     @Override
     public int alquilarEmbarcacion() {
         if(fecha_fabric.isAfter(LocalDate.of(2020, 12, 31))){
-            this.precio_total = valor_adicional + precio_base + 20000;
+            precio_total = valor_adicional + precio_base + 20000;
 
         }else{
-            this.precio_total = valor_adicional + precio_base;
+            precio_total = valor_adicional + precio_base;
         }
         return precio_total;
+    }
+
+    @Override
+    public String toString() {
+        return "Velero{" +
+                "precio_base=" + precio_base +
+                ", valor_adicional=" + valor_adicional +
+                ", capitan=" + capitan +
+                ", longitud=" + longitud +
+                ", fecha_fabric=" + fecha_fabric +
+                ", n_mastiles=" + n_mastiles +
+                ", precio_total=" + precio_total +
+                '}';
     }
 }

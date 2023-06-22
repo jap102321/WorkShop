@@ -13,12 +13,13 @@ public class Yate extends Embarcacion{
     private int n_camarotes;
     private int precio_total;
 
-    public Yate(){
 
-    }
 
-    public Yate(int precio_base, int valor_adicional, Capitan capitan, int longitud, LocalDate fecha_fabric, int n_camarotes){
-        super(precio_base, valor_adicional, capitan, longitud);
+    public Yate(int precio_base, Capitan capitan, int longitud, LocalDate fecha_fabric, int n_camarotes){
+        super(precio_base,  capitan, longitud);
+        this.precio_base = precio_base;
+        this.capitan = capitan;
+        this.longitud = longitud;
         this.fecha_fabric = fecha_fabric;
         this.n_camarotes = n_camarotes;
     }
@@ -41,11 +42,24 @@ public class Yate extends Embarcacion{
     @Override
     public int alquilarEmbarcacion() {
         if(fecha_fabric.isAfter(LocalDate.of(2020, 12, 31))){
-            this.precio_total = valor_adicional + precio_base + 20000;
+            precio_total = valor_adicional + precio_base + 20000;
 
         }else{
-            this.precio_total = valor_adicional + precio_base;
+            precio_total = valor_adicional + precio_base;
         }
-        return precio_total;
+        return this.precio_total;
+    }
+
+    @Override
+    public String toString() {
+        return "Yate{" +
+                "precio_base=" + precio_base +
+                ", valor_adicional=" + valor_adicional +
+                ", capitan=" + capitan +
+                ", longitud=" + longitud +
+                ", fecha_fabric=" + fecha_fabric +
+                ", n_camarotes=" + n_camarotes +
+                ", precio_total=" + precio_total +
+                '}';
     }
 }
