@@ -41,17 +41,20 @@ public class Velero extends Embarcacion{
     @Override
     public int alquilarEmbarcacion() {
         if(fecha_fabric.isAfter(LocalDate.of(2020, 12, 31))){
-            precio_total = valor_adicional + precio_base + 20000;
+            precio_total = getValor_adicional() + precio_base + 20000;
 
         }else{
-            precio_total = valor_adicional + precio_base;
+            precio_total = getValor_adicional() + precio_base;
         }
         return precio_total;
     }
 
+
+
+
     @Override
     public String toString() {
-        return "Velero{" +
+        return "Velero" +
                 "precio_base=" + precio_base +
                 ", valor_adicional=" + valor_adicional +
                 ", capitan=" + capitan +
