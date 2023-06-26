@@ -42,10 +42,9 @@ public class Capitan {
 
     @Override
     public String toString() {
-        return "Capitan{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", matricula_navegacion=" + matricula_navegacion +
-                '}';
+        return "\nCapitan: \n " +
+                "Nombre: " + nombre +
+                ", apellido: " + apellido +
+                ", matricula de navegacion: " + matricula_navegacion;
     }
 }

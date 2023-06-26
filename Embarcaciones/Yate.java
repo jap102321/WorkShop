@@ -13,9 +13,6 @@ public class Yate extends Embarcacion{
     private int n_camarotes;
     private int precio_total;
 
-
-
-
     public Yate(int precio_base, Capitan capitan, int longitud, LocalDate fecha_fabric, int n_camarotes){
         super(precio_base,  capitan, longitud);
         this.precio_base = precio_base;
@@ -59,18 +56,15 @@ public class Yate extends Embarcacion{
         return this.precio_total;
     }
 
-
-
     @Override
     public String toString() {
-        return "Yate{" +
-                "precio_base=" + precio_base +
-                ", valor_adicional=" + valor_adicional +
-                ", capitan=" + capitan +
-                ", longitud=" + longitud +
-                ", fecha_fabric=" + fecha_fabric +
-                ", n_camarotes=" + n_camarotes +
-                ", precio_total=" + precio_total +
-                '}';
+        return "Yate: \n" +
+                "Precio base: " + precio_base +
+                ", valor adicional: " + valor_adicional +
+                ", longitud: " + longitud +
+                ", fecha fabricacion: " + fecha_fabric +
+                ", numero de camarotes: " + n_camarotes +
+                ", precio total: " + precio_total
+                + capitan;
     }
 }

@@ -13,7 +13,6 @@ public class Velero extends Embarcacion{
     private int n_mastiles;
     private int precio_total;
 
-
     public Velero(int precio_base, Capitan capitan, int longitud, LocalDate fecha_fabric, int n_mastiles){
         super(precio_base, capitan, longitud);
         this.precio_base = precio_base;
@@ -49,19 +48,15 @@ public class Velero extends Embarcacion{
         return precio_total;
     }
 
-
-
-
     @Override
     public String toString() {
-        return "Velero" +
-                "precio_base=" + precio_base +
-                ", valor_adicional=" + valor_adicional +
-                ", capitan=" + capitan +
-                ", longitud=" + longitud +
-                ", fecha_fabric=" + fecha_fabric +
-                ", n_mastiles=" + n_mastiles +
-                ", precio_total=" + precio_total +
-                '}';
+        return "\nVelero \n " +
+                "Precio base: " + precio_base +
+                ", valor adicional: " + valor_adicional +
+                ", longitud: " + longitud +
+                ", fecha de fabricacion: " + fecha_fabric +
+                ", numero de mastiles: " + n_mastiles +
+                ", precio total: " + precio_total
+                + capitan ;
     }
 }

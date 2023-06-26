@@ -27,6 +27,4 @@ public abstract class Embarcacion{
     public abstract void setValor_adicional(int valor_adicional);
     public abstract int alquilarEmbarcacion();
 
-
-
 }
